@@ -8,6 +8,16 @@ use Illuminate\View\View;
 
 class ProductController extends Controller
 {
+    public function all(): View
+    {
+        $viewData = [];
+        $viewData['title'] = 'Products - Online Store';
+        $viewData['subtitle'] = 'List of products';
+        $viewData['products'] = Product::with('comments')->get();
+
+        return view('product.all')->with('viewData', $viewData);
+    }
+
     public function index(): View
     {
         $viewData = [];
