@@ -20,6 +20,8 @@
         <div class="navbar-nav ms-auto">
           <a class="nav-link active" href="{{ route('home.index') }}">Home</a>
           <a class="nav-link active" href="{{ route('home.about') }}">About</a>
+          <a class="nav-link active" href="{{ route('lang.switch', 'en') }}">English</a>
+          <a class="nav-link active" href="{{ route('lang.switch', 'es') }}">Español</a>
           <div class="vr bg-white mx-2 d-none d-lg-block"></div>
           @guest
           <a class="nav-link active" href="{{ route('login') }}">Login</a>
@@ -62,5 +64,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
   </script>
+
 </body>
 </html>

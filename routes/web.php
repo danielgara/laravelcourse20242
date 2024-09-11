@@ -28,5 +28,6 @@ Route::get('/image-not-di', 'App\Http\Controllers\ImageNotDIController@index')->
 Route::post('/image-not-di/save', 'App\Http\Controllers\ImageNotDIController@save')->name('imagenotdi.save');
 Route::get('/imagetwo', 'App\Http\Controllers\ImageControllerTwoOptions@index')->name('imagetwo.index');
 Route::post('/imagetwo/save', 'App\Http\Controllers\ImageControllerTwoOptions@save')->name('imagetwo.save');
+Route::get('lang/{lang}', 'App\Http\Controllers\LanguageController@switchLang')->name('lang.switch');
 
 Auth::routes();
